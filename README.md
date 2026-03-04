@@ -1,6 +1,6 @@
 ## Overview
-During routine log monitoring, multiple failed authentication attempts were detected targeting **aim.user@king.local**.  
-Between **15:27:56 and 15:28:55**, five consecutive failed attempts originated from **King-Client.king.local** via **interactive logon (Logon Type 2)**.  
+During routine log monitoring, multiple failed authentication attempts were detected targeting aim.user@king.local.  
+Between 19:16:14 and 19:16:38 on 04 March 2026, five consecutive failed attempts originated from **King-Client.king.local** via **interactive logon (Logon Type 2)**.  
 
 The account was automatically locked out after five failed attempts, confirming the domain’s account lockout policy was triggered.  
 
@@ -9,9 +9,9 @@ This represents a **targeted brute-force attempt**.
 ## Investigation Steps
 
 **Event Identification**  
-   - Filtered Security logs on DC-KING for Event ID 4625 (Failed Logon) related to **aim.user@king.local**.  
+   - Filtered Security logs on DC-KING for Event ID 4625 (Failed Logon) related to aim.user@king.local.  
    - Observed five failed attempts from King-Client.king.local.  
-   - Confirmed account lockout with Event ID 4740 at 15:28:55.
+   - Confirmed account lockout with Event ID 4740 at 19:16:37.
 
 **Data Extraction**  
    - Target Account: `aim.user@king.local`  
@@ -24,12 +24,12 @@ This represents a **targeted brute-force attempt**.
 
 | Time           | Event ID | Description                                   |
 |----------------|----------|-----------------------------------------------|
-| 14:25:17       | 4625     | First failed logon attempt                    |
-| 14:25:23       | 4625     | Second failed logon attempt                   |
-| 14:25:28       | 4625     | Third failed logon attempt                    |
-| 15:25:34       | 4625     | Fourth failed logon attempt                   |
-| 15:25:42       | 4625     | Fifth failed logon attempt                    |
-| 15:25:48       | 4740     | Account `aim.user` locked out                 |
+| 19:16:14       | 4625     | First failed logon attempt                    |
+| 19:16:20       | 4625     | Second failed logon attempt                   |
+| 19:16:25       | 4625     | Third failed logon attempt                    |
+| 19:16:29       | 4625     | Fourth failed logon attempt                   |
+| 19:16:33       | 4625     | Fifth failed logon attempt                    |
+| 19:16:38       | 4740     | Account `aim.user` locked out                 |
 
 ## Analysis
 
@@ -49,9 +49,9 @@ This represents a **targeted brute-force attempt**.
 **Risk Level:** Medium  
 - No compromise occurred, but activity indicates potential reconnaissance or early-stage intrusion.  
 
----
 
-## 6. Containment & Recommendations
+
+## Containment & Recommendations
 
 1. Reset password for **aim.user**.  
 2. Inspect **King-Client.king.local** for compromise or automated login scripts.  
@@ -59,7 +59,7 @@ This represents a **targeted brute-force attempt**.
 4. Configure SIEM alerts for repeated failed logons.  
 5. Educate users on strong passwords and reporting suspicious activity.
 
----
+
 
 ## 7. Evidence
 
