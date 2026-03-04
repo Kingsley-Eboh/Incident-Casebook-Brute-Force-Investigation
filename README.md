@@ -44,7 +44,7 @@ This represents a **targeted brute-force attempt**.
 - **Technique:** T1110 – Brute Force  
 - **Tactic:** Credential Access  
 
-## 5. Impact Assessment
+## Impact Assessment
 
 **Risk Level:** Medium  
 - No compromise occurred, but activity indicates potential reconnaissance or early-stage intrusion.  
@@ -61,7 +61,7 @@ This represents a **targeted brute-force attempt**.
 
 
 
-## 7. Evidence
+## Evidence
 
 - `4625-Failed-Logons.png` – sequence of failed logons  
 - `4740-Lockout.png` – account lockout event  
