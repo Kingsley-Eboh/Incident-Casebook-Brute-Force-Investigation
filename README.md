@@ -129,10 +129,10 @@ A brute-force attack was detected against a domain user account in the king.loca
 ## Evidence
 
 ### Failed Logon Attempts — Event ID 4625
-[![4625-Failed-Logons](4625-Failed-Logons.png)](4625-Failed-Logons.png)
+[![4625a](4625a.png)](4625a.png)
 
 ### Account Lockout — Event ID 4740
-[![4740-Lockout](4740-Lockout.png)](4740-Lockout.png)
+[![4740a](4740a.png)](4740a.png)
 
 ---
 
